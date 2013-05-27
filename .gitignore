@@ -1,3 +1,8 @@
+cache/cache.lock
+sessions/*
+
+*~
+
 *.py[cod]
 
 # C extensions

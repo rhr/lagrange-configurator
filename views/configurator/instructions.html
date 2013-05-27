@@ -1,0 +1,78 @@
+{{extend "configurator_layout.html"}}
+{{#snapversion = "20100721"}}
+{{#snapversion = "20101113"}}
+{{#snapversion = "20110117"}}
+{{snapversion = "20120508"}}
+{{import datetime}}
+{{update = datetime.date(int(snapversion[:4]),int(snapversion[4:6]),int(snapversion[6:8])).strftime("%d %B %Y")}}
+{{snapfilebase = "Lagrange-%s" % snapversion}}
+{{snaplinkbase = "/%s/static/%s" % (request.application, snapfilebase)}}
+
+<b>Instructions:</b> The current version of Lagrange requires that
+Python is already installed on your computer.  It also requires two
+Python libraries: <a href="http://www.scipy.org">scipy</a>
+and <a href="http://numpy.scipy.org">numpy</a>.  <b>On Windows,</b>
+install packages that match your version of Python (recommended:
+Python 2.5).
+
+<br style="margin-bottom:0.5em;" />
+
+<b>Note:</b> you can check whether scipy is installed correctly by
+opening a Python shell (on Windows, try launching IDLE from the
+Programs menu).  You will see a <code>>>></code> prompt.  Type:
+<pre><code>>>> import scipy</code></pre> and hit return.  If no error
+messages appear, scipy is installed correctly.
+
+<br style="margin-bottom:0.5em;" />
+
+<b>Once you have installed Python, scipy, and numpy:</b>
+
+<ol style="margin-left:2em;">
+
+<li>
+Download latest snapshot archive of Lagrange:
+<ul style="margin-left:1em;">
+<li><a
+href="{{=snaplinkbase}}.tar.gz">{{=snapfilebase}}.tar.gz</a> (for
+Linux/Mac) or</li>
+<li><a
+href="{{=snaplinkbase}}.zip">{{=snapfilebase}}.zip</a> (for Windows).
+</li>
+</ul>
+
+<b>Please check</b> that you are using the latest snapshot version,
+released on {{=update}}.  The script <b>will not work</b> with earlier
+versions of Lagrange (e.g. 2.0.1).
+
+</li>
+
+<li>
+Unpack the Lagrange archive.  This will create a folder,
+<code>{{=snapfilebase}}</code>.
+</li>
+<li>
+Place your script in this folder (<b>not</b> in the
+<code>lagrange</code> subfolder).
+</li>
+<li>
+Run the script.
+<ul style="margin-left:1em;">
+<li>
+At a command prompt, type: <code>python
+<i>name</i>.lagrange.py</code>, or
+</li>
+<li>
+on Windows, launch IDLE from the Programs menu, open the script, and
+choose Run:Run Module (shortcut key F5).
+</li>
+</ul>
+</li>
+<li>
+Results of the analysis are logged to a text file,
+<code><i>name</i>.results.txt</code>.
+</li>
+</ol>
+
+<div style="margin-top:0.5em">
+<a href="index">Return to configurator</a>
+</div>
