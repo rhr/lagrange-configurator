@@ -668,3 +668,6 @@ def base_rates_form():
 
 def instructions():
     return dict()
+
+def changelog():
+    return dict()
