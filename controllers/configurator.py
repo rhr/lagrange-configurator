@@ -11,8 +11,8 @@ from cStringIO import StringIO
 from types import StringTypes
 
 ## reload(lagrange)
-reload(models)
-reload(treeview)
+## reload(models)
+## reload(treeview)
 
 def toolbar():
     session.ti = int(request.vars.ti or session.ti or 0)
